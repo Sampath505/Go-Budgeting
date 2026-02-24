@@ -59,7 +59,7 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
       <div className="flex-[1.1] bg-[#b1a6e0] p-8 lg:p-16 xl:p-20 flex flex-col justify-center text-white shrink-0">
         <div className="mb-10 lg:mb-14">
           {/* Logo scaled and inverted for branding section visibility */}
-          <img src="/logo-png.png" alt="Logo" className="h-16 lg:h-20 w-auto object-contain brightness-0 invert" />
+          <img src="logo-png.jpg" alt="Logo" className="h-16 lg:h-20 w-auto object-contain brightness-0 invert" />
         </div>
         
         <h2 className="text-3xl lg:text-5xl font-black mb-10 lg:mb-16 leading-tight lg:max-w-md tracking-tighter">
