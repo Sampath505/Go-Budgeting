@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Settings, ShieldCheck, UserCog, Eye, EyeOff, ArrowLeft 
+import {
+  Settings, ShieldCheck, UserCog, Eye, EyeOff, ArrowLeft
 } from 'lucide-react';
 
 export default function Auth({ onNavigate, onAuthSuccess }) {
@@ -8,7 +8,7 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
   const [showPassword, setShowPassword] = useState(false);
   const [agree, setAgree] = useState(false);
   const [password, setPassword] = useState("");
-  
+
   // Local state to capture inputs before sending to Parent
   const [localUser, setLocalUser] = useState({
     firstName: '',
@@ -54,14 +54,17 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
 
   return (
     <div className="flex min-h-screen lg:h-screen flex-col lg:flex-row bg-white overflow-x-hidden font-sans">
-      
+
       {/* LEFT BRANDING SECTION - Matches Hero Theme */}
       <div className="flex-[1.1] bg-[#b1a6e0] p-8 lg:p-16 xl:p-20 flex flex-col justify-center text-white shrink-0">
         <div className="mb-10 lg:mb-14">
           {/* Logo scaled and inverted for branding section visibility */}
-          <img src="logo-png.jpg" alt="Logo" className="h-16 lg:h-20 w-auto object-contain brightness-0 invert" />
+          <img src="logo-png.jpg" alt="Logo" className="h-12 lg:h-16 w-auto object-contain shrink-0" />
+          <h1 className="text-3xl lg:text-5xl font-black text-[#b1a6e0] tracking-tighter leading-none flex items-center">
+            Go Budgeting
+          </h1>
         </div>
-        
+
         <h2 className="text-3xl lg:text-5xl font-black mb-10 lg:mb-16 leading-tight lg:max-w-md tracking-tighter">
           Your Journey to Financial Freedom.
         </h2>
@@ -86,54 +89,54 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
       {/* RIGHT FORM SECTION */}
       <div className="flex-1 p-6 lg:p-12 xl:p-20 flex flex-col justify-center items-center bg-white">
         <div className="w-full max-w-[400px] lg:max-w-lg flex flex-col items-center">
-          
+
           <h3 className="text-[#6a5acd] text-3xl lg:text-5xl font-black text-center mb-10 lg:mb-16 w-full tracking-tighter">
             {isLogin ? "Welcome Back!" : "Create Your Profile"}
           </h3>
 
           <form className="w-full space-y-5 lg:space-y-6 flex flex-col" onSubmit={handleSubmit}>
-            
+
             {!isLogin && (
               <div className="flex flex-wrap sm:flex-nowrap gap-4 w-full">
-                <input 
-                  type="text" 
-                  placeholder="First Name" 
+                <input
+                  type="text"
+                  placeholder="First Name"
                   value={localUser.firstName}
-                  onChange={(e) => setLocalUser({...localUser, firstName: e.target.value})}
-                  className="w-full sm:flex-1 p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all" 
-                  required 
+                  onChange={(e) => setLocalUser({ ...localUser, firstName: e.target.value })}
+                  className="w-full sm:flex-1 p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all"
+                  required
                 />
-                <input 
-                  type="text" 
-                  placeholder="Last Name" 
+                <input
+                  type="text"
+                  placeholder="Last Name"
                   value={localUser.lastName}
-                  onChange={(e) => setLocalUser({...localUser, lastName: e.target.value})}
-                  className="w-full sm:flex-1 p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all" 
-                  required 
+                  onChange={(e) => setLocalUser({ ...localUser, lastName: e.target.value })}
+                  className="w-full sm:flex-1 p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all"
+                  required
                 />
               </div>
             )}
 
-            <input 
-              type="email" 
-              placeholder="Email Address" 
+            <input
+              type="email"
+              placeholder="Email Address"
               value={localUser.email}
-              onChange={(e) => setLocalUser({...localUser, email: e.target.value})}
-              className="w-full p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all" 
-              required 
+              onChange={(e) => setLocalUser({ ...localUser, email: e.target.value })}
+              className="w-full p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all"
+              required
             />
 
             <div className="relative w-full">
-              <input 
-                type={showPassword ? "text" : "password"} 
-                placeholder="Password" 
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
                 value={password}
                 onChange={(e) => handlePasswordChange(e.target.value)}
                 className="w-full p-4 bg-gray-50 border border-gray-100 rounded-2xl text-sm lg:text-base outline-none focus:ring-2 focus:ring-[#6a5acd] transition-all"
-                required 
+                required
               />
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#6a5acd] transition-colors"
               >
@@ -143,8 +146,8 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
 
             {/* Password Utility Links */}
             {isLogin && (
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={handleForgot}
                 className="text-xs text-[#6a5acd] font-bold block ml-auto hover:underline"
               >
@@ -166,11 +169,11 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
             )}
 
             <label className="flex items-start gap-4 cursor-pointer py-2 w-full">
-              <input 
-                type="checkbox" 
-                className="w-6 h-6 mt-0.5 accent-[#6a5acd] shrink-0" 
-                checked={agree} 
-                onChange={(e) => setAgree(e.target.checked)} 
+              <input
+                type="checkbox"
+                className="w-6 h-6 mt-0.5 accent-[#6a5acd] shrink-0"
+                checked={agree}
+                onChange={(e) => setAgree(e.target.checked)}
                 required
               />
               <span className="text-[11px] lg:text-sm text-gray-500 leading-tight">
@@ -178,28 +181,28 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
               </span>
             </label>
 
-            <button 
+            <button
               disabled={!agree}
-              type="submit" 
+              type="submit"
               className="w-full bg-[#6a5acd] text-white py-5 rounded-3xl font-black text-lg lg:text-xl shadow-2xl active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLogin ? "Sign-in" : "Create Account"}
             </button>
 
-            <button 
-              type="button" 
-              onClick={() => { setIsLogin(!isLogin); setLocalUser({firstName: '', lastName: '', email: ''}); setPassword(""); }} 
+            <button
+              type="button"
+              onClick={() => { setIsLogin(!isLogin); setLocalUser({ firstName: '', lastName: '', email: '' }); setPassword(""); }}
               className="w-full text-[#6a5acd] border-2 border-[#6a5acd] py-4 rounded-full font-bold text-xs lg:text-sm mt-3 hover:bg-[#6a5acd]/5 transition-all text-center"
             >
               {isLogin ? "New User? Create Account!" : "Already Existing User? Login!"}
             </button>
 
-            <button 
-              type="button" 
+            <button
+              type="button"
               onClick={resetAndHome}
               className="w-full text-center text-gray-400 font-bold text-xs lg:text-sm mt-6 underline hover:text-[#6a5acd] transition-colors flex items-center justify-center gap-2"
             >
-              <ArrowLeft size={18}/> Back to Home
+              <ArrowLeft size={18} /> Back to Home
             </button>
           </form>
         </div>
