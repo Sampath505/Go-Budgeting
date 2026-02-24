@@ -58,7 +58,7 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
       {/* LEFT BRANDING SECTION - Matches Hero Theme */}
       <div className="flex-[1.1] bg-[#b1a6e0] p-8 lg:p-16 xl:p-20 flex flex-col justify-center text-white shrink-0">
         {/* 1. STICKY HEADER - Balanced Logo and Text */}
-        <header className="w-full flex items-center justify-center py-8 gap-6 sticky top-0 z-50">
+        <header className="w-full flex items-center py-8 gap-2 sticky top-0 z-50">
           <img src="logo-png.jpg" alt="Logo" className="h-12 lg:h-16 w-auto object-contain shrink-0" />
           <h1 className="text-3xl lg:text-5xl font-black tracking-tighter leading-none flex items-center">
             Go Budgeting
@@ -168,7 +168,7 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
               </div>
             )}
 
-            <label className="flex items-start gap-4 cursor-pointer py-2 w-full">
+            <label className="flex items-center gap-4 cursor-pointer py-2 w-full">
               <input
                 type="checkbox"
                 className="w-6 h-6 mt-0.5 accent-[#6a5acd] shrink-0"
