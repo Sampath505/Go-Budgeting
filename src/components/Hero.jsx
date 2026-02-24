@@ -67,20 +67,7 @@ export default function Hero({ onNavigate }) {
         </h1>
       </header>
 
-      {/* 2. HERO CONTENT */}
-      <section className="w-full py-10 text-center px-6">
-        <p className="text-xl lg:text-3xl text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-          Tell your money where to go, instead of wondering where it went.
-        </p>
-        <button 
-          onClick={() => onNavigate(2)} 
-          className="bg-[#6a5acd] text-white px-16 py-5 rounded-full font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest"
-        >
-          Let's plan a budget
-        </button>
-      </section>
-
-      {/* 3. WHAT IS BUDGETING */}
+      {/* 2. WHAT IS BUDGETING */}
       <section className="w-full py-10 text-center border-t border-gray-50">
         <div className="inline-block border-2 border-[#b1a6e0] px-6 py-1 rounded-lg font-black text-gray-600 text-[10px] uppercase tracking-widest mb-4">
           What is Budgeting?
@@ -91,7 +78,7 @@ export default function Hero({ onNavigate }) {
         <cite className="block mt-2 text-[#b1a6e0] font-bold text-xs">- Dave Ramsey</cite>
       </section>
 
-      {/* 4. WHY USE BUDGETING - Optimized Grid */}
+      {/* 3. WHY USE BUDGETING - Optimized Grid */}
       <section className="w-full py-20 bg-[#e2e1f9] px-6">
         <div className="text-center mb-12">
           <div className="inline-block bg-white border-2 border-[#b1a6e0] px-6 py-1.5 rounded-lg font-black text-gray-600 text-[10px] uppercase tracking-widest">
@@ -112,6 +99,19 @@ export default function Hero({ onNavigate }) {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* 4. HERO CONTENT */}
+      <section className="w-full py-10 text-center px-6">
+        <p className="text-xl lg:text-3xl text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+          Tell your money where to go, instead of wondering where it went.
+        </p>
+        <button 
+          onClick={() => onNavigate(2)} 
+          className="bg-[#6a5acd] text-white px-16 py-5 rounded-full font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest"
+        >
+          Let's plan a budget
+        </button>
       </section>
 
       {/* 5. WHY IS BUDGETING IMPORTANT - Responsive Columns */}
