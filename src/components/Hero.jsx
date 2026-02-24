@@ -61,7 +61,7 @@ export default function Hero({ onNavigate }) {
       
       {/* 1. STICKY HEADER - Balanced Logo and Text */}
       <header className="w-full flex items-center justify-center py-8 border-b border-gray-50 gap-6 bg-white sticky top-0 z-50">
-        <img src="public/logo-png.jpg" alt="Logo" className="h-12 lg:h-16 w-auto object-contain shrink-0" />
+        <img src="logo-png.jpg" alt="Logo" className="h-12 lg:h-16 w-auto object-contain shrink-0" />
         <h1 className="text-3xl lg:text-5xl font-black text-[#b1a6e0] tracking-tighter leading-none flex items-center">
           Go Budgeting
         </h1>
