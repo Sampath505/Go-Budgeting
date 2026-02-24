@@ -57,13 +57,13 @@ export default function Auth({ onNavigate, onAuthSuccess }) {
 
       {/* LEFT BRANDING SECTION - Matches Hero Theme */}
       <div className="flex-[1.1] bg-[#b1a6e0] p-8 lg:p-16 xl:p-20 flex flex-col justify-center text-white shrink-0">
-        <div className="mb-10 lg:mb-14">
-          {/* Logo scaled and inverted for branding section visibility */}
+        {/* 1. STICKY HEADER - Balanced Logo and Text */}
+        <header className="w-full flex items-center justify-center py-8 border-b border-gray-50 gap-6 bg-white sticky top-0 z-50">
           <img src="logo-png.jpg" alt="Logo" className="h-12 lg:h-16 w-auto object-contain shrink-0" />
           <h1 className="text-3xl lg:text-5xl font-black text-[#b1a6e0] tracking-tighter leading-none flex items-center">
             Go Budgeting
           </h1>
-        </div>
+        </header>
 
         <h2 className="text-3xl lg:text-5xl font-black mb-10 lg:mb-16 leading-tight lg:max-w-md tracking-tighter">
           Your Journey to Financial Freedom.
